@@ -254,7 +254,7 @@
       const dotsWrap = document.getElementById('courseDots');
       if (!track || !dotsWrap) return;
       const allCards = Array.from(track.children);
-      const perView = () => 2;
+      const perView = () => window.innerWidth <= 992 ? 2 : 3;
       const visibleCards = () => allCards.filter(c => c.style.display !== 'none');
       const pages = () => Math.max(1, Math.ceil(visibleCards().length / perView()));
       // Measure the exact scroll position of a card's left edge (accounts for
@@ -303,6 +303,25 @@
       track.addEventListener('scroll', () => requestAnimationFrame(update));
       window.addEventListener('resize', buildDots);
       buildDots();
+
+      let coursesAutoplayTimer = null;
+      function startCoursesAutoplay() {
+        stopCoursesAutoplay();
+        coursesAutoplayTimer = setInterval(() => {
+          const n = pages();
+          if (n <= 1) return;
+          const next = (currentPage() + 1) % n;
+          scrollToPage(next);
+        }, 5000);
+      }
+      function stopCoursesAutoplay() {
+        if (coursesAutoplayTimer) clearInterval(coursesAutoplayTimer);
+      }
+      function restartCoursesAutoplay() { startCoursesAutoplay(); }
+      startCoursesAutoplay();
+      track.addEventListener('mouseenter', stopCoursesAutoplay);
+      track.addEventListener('mouseleave', startCoursesAutoplay);
+
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -315,6 +334,7 @@
           });
           track.scrollTo({ left: 0, behavior: 'auto' });
           buildDots();
+          restartCoursesAutoplay();
         });
       });
     })();
