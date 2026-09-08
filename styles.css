@@ -755,6 +755,8 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .hero-slide.is-prev { z-index: 2 !important; transform: translate(calc(-124.636% + var(--page-margin)), -50%) scale(0.78) !important; opacity: 1 !important; background: #fbf4e6 !important; }
 .hero-slide.is-next { z-index: 2 !important; transform: translate(calc(24.636% - var(--page-margin)), -50%) scale(0.78) !important; opacity: 1 !important; background: #fbf4e6 !important; }
 .hero-slide.is-hidden { z-index: 1 !important; opacity: 0 !important; transform: translate(-50%, -50%) scale(0.6) !important; pointer-events: none !important; }
+.hero-slide.is-far-prev { z-index: 1 !important; transform: translate(calc(-160% + var(--page-margin)), -50%) scale(0.56) !important; opacity: 0.85 !important; background: #fbf4e6 !important; cursor: pointer !important; }
+.hero-slide.is-far-next { z-index: 1 !important; transform: translate(calc(60% - var(--page-margin)), -50%) scale(0.56) !important; opacity: 0.85 !important; background: #fbf4e6 !important; cursor: pointer !important; }
 .play-btn { width: 84px !important; height: 84px !important; border: 3px solid #b9afd0 !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; color:#40314e !important; background: transparent !important; position: relative !important; z-index: 2 !important; transition: transform .2s !important; }
 .play-btn:hover { transform: scale(1.08) !important; }
 .play-btn svg { width: 34px !important; height: 34px !important; margin-left: 6px !important; fill: currentColor !important; stroke: none !important; }
@@ -979,6 +981,7 @@ body:has(.drawer-toggle:checked) { overflow: hidden !important; }
   .hero-slide { width: 60% !important; }
   .hero-slide.is-prev { transform: translate(calc(-94.333% + var(--page-margin)), -50%) scale(0.78) !important; }
   .hero-slide.is-next { transform: translate(calc(-5.667% - var(--page-margin)), -50%) scale(0.78) !important; }
+  .hero-slide.is-far-prev, .hero-slide.is-far-next { opacity: 0 !important; pointer-events: none !important; transform: translate(-50%, -50%) scale(0.6) !important; }
   .course-card { flex: 0 0 calc(50% - 10px) !important; }
   .course-carousel { gap: 20px !important; }
   .test-grid { gap: 20px !important; }
@@ -992,6 +995,7 @@ body:has(.drawer-toggle:checked) { overflow: hidden !important; }
 }
 /* ── MOBILE 480–600px ── */
 @media (max-width: 600px) {
+  .hero-slide.is-far-prev, .hero-slide.is-far-next { opacity: 0 !important; pointer-events: none !important; transform: translate(-50%, -50%) scale(0.6) !important; }
   .section-title { font-size: clamp(28px, 8vw, 60px) !important; margin-bottom: 20px !important; }
   h2, .course-header h2, .text-col h2 { font-size: clamp(28px, 8vw, 60px) !important; line-height: 1.25 !important; }
   h3 { font-size: 15px !important; }
