@@ -6,7 +6,7 @@
   --brand-cream:#fbf4e6;
   --brand-blue:#a0b8e1;
   --brand-black:#2d2d2d;
-  --brand-white:#ffffff; 
+  --brand-white:#ffffff;
   --sans:'Montserrat', sans-serif;
   --brand-pink-light:#f48ab0;
   --brand-pink-pale:#f9c2d2;
@@ -740,8 +740,8 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; }
 .nav-dropdown-menu a { display: block !important; padding: 9px 14px !important; border-radius: 8px !important; color:#40314e !important; font-style: normal !important; font-size: 15px !important; }
 .nav-dropdown-menu a:hover { background: var(--brand-cream) !important; }
-.btn-phone { background-color: #b9afd0 !important; color:#40314e !important; padding: 12px 22px !important; border-radius: 50px !important; font-weight: 600 !important; font-size: 20px !important; font-style: italic !important; white-space: nowrap !important; display: inline-flex !important; align-items: center !important; gap: 9px !important; border: none !important; cursor: pointer !important; transition: background .2s, color .2s !important; }
-.btn-phone:hover { background-color: #40314e !important; color:#b9afd0 !important; }
+.btn-phone { background-color: #c3d7ee !important; color:#40314e !important; padding: 12px 22px !important; border-radius: 50px !important; font-weight: 600 !important; font-size: 20px !important; font-style: italic !important; white-space: nowrap !important; display: inline-flex !important; align-items: center !important; gap: 9px !important; border: none !important; cursor: pointer !important; opacity: 1 !important; transition: opacity .2s !important; }
+.btn-phone:hover { background-color: #c3d7ee !important; color:#40314e !important; opacity: 0.75 !important; }
 .btn-phone svg { flex-shrink: 0 !important; }
 /* ─── 2. HERO CAROUSEL (scrollable + autoplay) ─── */
 .hero-section { background-color: #c3d7ee !important; padding: 65px 0 45px !important; position: relative !important; overflow: hidden !important; }
@@ -766,9 +766,9 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .course-header h2 { font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(28px, 4.5vw, 60px) !important; color:#40314e !important; line-height: 1.1 !important; margin: 0 !important; }
 .course-header p { color:#40314e !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 700 !important; margin: 0 !important; }
 .course-filter { display: flex !important; flex-wrap: wrap !important; gap: 14px !important; margin-bottom: 36px !important; max-width: var(--page-width) !important; margin-left: auto !important; margin-right: auto !important; padding-left: var(--page-margin) !important; padding-right: var(--page-margin) !important; box-sizing: border-box !important; }
-.filter-btn { font-family: var(--sans) !important; font-size: 20px !important; font-weight: 600 !important; padding: 10px 26px !important; border: 2px solid #b9afd0 !important; border-radius: 50px !important; background: #b9afd0 !important; color:#40314e !important; transition: 0.2s !important; }
+.filter-btn { font-family: var(--sans) !important; font-size: 20px !important; font-weight: 600 !important; padding: 10px 26px !important; border: 2px solid #c3d7ee !important; border-radius: 50px !important; background: #c3d7ee !important; color:#40314e !important; transition: 0.2s !important; }
 .filter-btn:hover { background: #40314e !important; border-color: #40314e !important; color:#b9afd0 !important; }
-.filter-btn.active { background: #40314e !important; color:#b9afd0 !important; border-color: #40314e !important; }
+.filter-btn.active { background: #82a3d4 !important; color:#40314e !important; border-color: #82a3d4 !important; }
 .course-carousel { overflow-x: auto !important; scroll-snap-type: x mandatory !important; scroll-padding-left: var(--page-margin) !important; display: flex !important; gap: 40px !important; padding: 6px var(--page-margin) 10px !important; max-width: var(--page-width) !important; margin: 0 auto !important; box-sizing: border-box !important; scrollbar-width: none !important; }
 .course-carousel::-webkit-scrollbar { display: none !important; }
 .course-card { flex: 0 0 calc(50% - 20px) !important; scroll-snap-align: start !important; scroll-snap-stop: always !important; background: var(--brand-cream-card) !important; border-radius: 16px !important; padding: 30px 34px 34px !important; display: flex; flex-direction: column !important; text-align: center !important; box-shadow: 0 6px 18px rgba(0,0,0,0.04) !important; }
