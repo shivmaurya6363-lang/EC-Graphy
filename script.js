@@ -82,12 +82,16 @@
       const dots = Array.from(dotsWrap.children);
       function render() {
         slides.forEach((slide, i) => {
-          slide.classList.remove('is-active','is-prev','is-next','is-hidden');
+          slide.classList.remove('is-active','is-prev','is-next','is-far-prev','is-far-next','is-hidden');
           const prev = (current - 1 + total) % total;
           const next = (current + 1) % total;
+          const farPrev = (current - 2 + total) % total;
+          const farNext = (current + 2) % total;
           if (i === current) slide.classList.add('is-active');
           else if (i === prev) slide.classList.add('is-prev');
           else if (i === next) slide.classList.add('is-next');
+          else if (total > 4 && i === farPrev) slide.classList.add('is-far-prev');
+          else if (total > 4 && i === farNext) slide.classList.add('is-far-next');
           else slide.classList.add('is-hidden');
           const v = slide.querySelector('video');
           if (v) {
@@ -113,6 +117,8 @@
         slide.addEventListener('click', () => {
           if (slide.classList.contains('is-prev')) { goTo(current - 1); restartAutoplay(); }
           else if (slide.classList.contains('is-next')) { goTo(current + 1); restartAutoplay(); }
+          else if (slide.classList.contains('is-far-prev')) { goTo(current - 2); restartAutoplay(); }
+          else if (slide.classList.contains('is-far-next')) { goTo(current + 2); restartAutoplay(); }
         });
       });
       let startX = null;
