@@ -3,7 +3,7 @@
 }
   :root{
   --brand-pink:#E0C7D6;
-  --brand-cream:#fbf4e6;
+  --brand-cream:#fbf2eb;
   --brand-blue:#a0b8e1;
   --brand-black:#2d2d2d;
   --brand-white:#ffffff;
@@ -397,7 +397,7 @@ body{
   height:100% !important;
 }
 .footer-wave .wave-fill{
-  fill:var(--brand-blue) !important;
+  fill:#c3d7ee !important;
 }
 .footer-wave .wave-stroke{
   fill:none !important;
@@ -528,7 +528,7 @@ body{
   object-fit:contain !important;
 }
 .pre-footer{
-  background-color:var(--brand-blue) !important;
+  background-color:#c3d7ee !important;
   color:#40314e !important;
   width:100% !important;
   box-sizing:border-box !important;
