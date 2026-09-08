@@ -714,7 +714,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .dot { width: 10px !important; height: 10px !important; border-radius: 50% !important; background: var(--brand-blue) !important; opacity: 0.5 !important; transition: opacity .3s !important; cursor: pointer !important; border: none !important; padding: 0 !important; }
 .dot.active { opacity: 1 !important; }
 /* ─── 1. TOP BAR & HEADER (match mockup) ─── */
-.top-bar { background-color: #ee6396 !important; color:#40314e !important; font-size: 15px !important; font-weight: 400 !important; font-family: var(--sans) !important; overflow: hidden !important; }
+.top-bar { background-color: #ee6396 !important; color:#fbf4e6 !important; font-size: 15px !important; font-weight: 400 !important; font-family: var(--sans) !important; overflow: hidden !important; }
 .top-bar-viewport { width: 100% !important; overflow: hidden !important; }
 .top-bar-track { display: flex !important; transition: transform 0.6s ease !important; animation: topBarSlide 8s infinite !important; }
 .top-bar-slide { flex: 0 0 100% !important; text-align: center !important; padding: 10px 15px !important; box-sizing: border-box !important; white-space: nowrap !important; }
