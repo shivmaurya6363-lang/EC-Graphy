@@ -312,7 +312,7 @@
           if (n <= 1) return;
           const next = (currentPage() + 1) % n;
           scrollToPage(next);
-        }, 5000);
+        }, 2000);
       }
       function stopCoursesAutoplay() {
         if (coursesAutoplayTimer) clearInterval(coursesAutoplayTimer);
