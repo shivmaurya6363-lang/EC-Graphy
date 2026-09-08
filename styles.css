@@ -1344,6 +1344,9 @@ button.price-pill:hover{
 .minikit-pill a{
   display: block !important; width: 100% !important; height: 100% !important; padding: 14px 34px !important; color:#40314e !important; text-decoration: none !important;
 }
+.minikit-pill:hover a{
+  color:#b9afd0 !important;
+}
 .footer-newsletter > p{
   font-size: 11px !important; color:#40314e !important; margin-bottom: 14px !important;
 }
