@@ -239,10 +239,10 @@ body{
   pointer-events:all;
 }
 .sound-btn .icon-play{
-  fill:var(--brand-pink);
+  fill:#40314e;
 }
 .sound-btn .icon-volume{
-  stroke:var(--brand-pink);
+  stroke:#40314e;
 }
 .test-section .dots-pagination{
   margin-top:28px;
@@ -318,7 +318,7 @@ body{
   margin-top:6px;
   display:inline-block;
   width:auto;
-  background:var(--brand-pink);
+  background:#b9afd0;
   color:#40314e;
   font-size:20px;
   font-weight:600;
@@ -479,9 +479,9 @@ body{
   transition:border-color .2s, background .2s, color .2s !important;
 }
 .footer-social a:hover{
-  border-color:var(--brand-pink) !important;
-  background:var(--brand-pink) !important;
-  color:#40314e !important;
+  border-color:#40314e !important;
+  background:#40314e !important;
+  color:#b9afd0 !important;
 }
 .footer-social svg{
   width:16px !important;
@@ -498,7 +498,7 @@ body{
 .footer-badge svg{
   width:13px !important;
   height:13px !important;
-  stroke:var(--brand-pink) !important;
+  stroke:#40314e !important;
   fill:none !important;
   stroke-width:2 !important;
   stroke-linecap:round !important;
@@ -753,7 +753,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .hero-slide.is-prev { z-index: 2 !important; transform: translate(calc(-124.636% + var(--page-margin)), -50%) scale(0.78) !important; opacity: 1 !important; background: #fbf4e6 !important; }
 .hero-slide.is-next { z-index: 2 !important; transform: translate(calc(24.636% - var(--page-margin)), -50%) scale(0.78) !important; opacity: 1 !important; background: #fbf4e6 !important; }
 .hero-slide.is-hidden { z-index: 1 !important; opacity: 0 !important; transform: translate(-50%, -50%) scale(0.6) !important; pointer-events: none !important; }
-.play-btn { width: 84px !important; height: 84px !important; border: 3px solid var(--brand-pink) !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; color:#40314e !important; background: transparent !important; position: relative !important; z-index: 2 !important; transition: transform .2s !important; }
+.play-btn { width: 84px !important; height: 84px !important; border: 3px solid #b9afd0 !important; border-radius: 50% !important; display: flex !important; align-items: center !important; justify-content: center !important; color:#40314e !important; background: transparent !important; position: relative !important; z-index: 2 !important; transition: transform .2s !important; }
 .play-btn:hover { transform: scale(1.08) !important; }
 .play-btn svg { width: 34px !important; height: 34px !important; margin-left: 6px !important; fill: currentColor !important; stroke: none !important; }
 .hero-slide.is-prev .play-btn, .hero-slide.is-next .play-btn { width: 70px !important; height: 70px !important; }
@@ -836,12 +836,12 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .test-box { flex: 0 0 calc((100% - 56px) / 3) !important; aspect-ratio: 3/4 !important; border-radius: 30px !important; position: relative !important; overflow: hidden !important; background: var(--brand-cream) !important; }
 .test-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; z-index: 1 !important; }
 .play-overlay { position: absolute !important; inset: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; z-index: 2 !important; pointer-events: none !important; }
-.sound-btn { width: 56px !important; height: 56px !important; border-radius: 50% !important; border: 2.5px solid var(--brand-pink) !important; background: rgba(251,244,230,0.85) !important; display: flex !important; align-items: center !important; justify-content: center !important; cursor: pointer !important; pointer-events: all !important; position: relative !important; z-index: 3 !important; backdrop-filter: blur(6px) !important; transition: transform 0.15s, background 0.2s, opacity 0.5s ease !important; }
+.sound-btn { width: 56px !important; height: 56px !important; border-radius: 50% !important; border: 2.5px solid #b9afd0 !important; background: rgba(251,244,230,0.85) !important; display: flex !important; align-items: center !important; justify-content: center !important; cursor: pointer !important; pointer-events: all !important; position: relative !important; z-index: 3 !important; backdrop-filter: blur(6px) !important; transition: transform 0.15s, background 0.2s, opacity 0.5s ease !important; }
 .sound-btn:hover { background: rgba(251,244,230,0.98) !important; transform: scale(1.08) !important; }
 .sound-btn.faded { opacity: 0 !important; pointer-events: none !important; }
 .test-box:hover .sound-btn.faded { opacity: 1 !important; pointer-events: all !important; }
-.sound-btn .icon-play { fill: var(--brand-pink) !important; }
-.sound-btn .icon-volume { stroke: var(--brand-pink) !important; }
+.sound-btn .icon-play { fill: #40314e !important; }
+.sound-btn .icon-volume { stroke: #40314e !important; }
 .test-section .dots-pagination { margin-top: 28px !important; }
 /* ─── 7. WHO THIS IS FOR ─── */
 .founder-section { background: var(--brand-cream) !important; position: relative !important; padding: 100px 0 !important; }
