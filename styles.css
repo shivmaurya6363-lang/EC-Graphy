@@ -443,7 +443,7 @@ body{
 }
 .subscribe-form input{
   flex:1 !important;
-  padding:6px 16px !important;
+  padding:16px !important;
   border:none !important;
   font-size:15px !important;
   font-family:var(--sans) !important;
@@ -714,7 +714,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .dot { width: 10px !important; height: 10px !important; border-radius: 50% !important; background: var(--brand-blue) !important; opacity: 0.5 !important; transition: opacity .3s !important; cursor: pointer !important; border: none !important; padding: 0 !important; }
 .dot.active { opacity: 1 !important; }
 /* ─── 1. TOP BAR & HEADER (match mockup) ─── */
-.top-bar { background-color: var(--brand-blue) !important; color:#40314e !important; font-size: 15px !important; font-weight: 400 !important; font-family: var(--sans) !important; overflow: hidden !important; }
+.top-bar { background-color: #ee6396 !important; color:#40314e !important; font-size: 15px !important; font-weight: 400 !important; font-family: var(--sans) !important; overflow: hidden !important; }
 .top-bar-viewport { width: 100% !important; overflow: hidden !important; }
 .top-bar-track { display: flex !important; transition: transform 0.6s ease !important; animation: topBarSlide 8s infinite !important; }
 .top-bar-slide { flex: 0 0 100% !important; text-align: center !important; padding: 10px 15px !important; box-sizing: border-box !important; white-space: nowrap !important; }
@@ -775,7 +775,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .card-image { width: 100% !important; height: auto !important; border-radius: 8px !important; background: var(--brand-pink-pale) !important; margin-bottom: 20px !important; overflow: hidden !important; }
 .card-image img { width: 100% !important; height: auto !important; display: block !important; object-fit: cover !important; }
 .card-meta { font-size: 15px !important; line-height: 1.4 !important; color:#40314e !important; font-weight: 500 !important; }
-.card-title { font-family: var(--fashion) !important; font-weight: 400 !important; font-size: clamp(24px, 4vw, 48px) !important; color:#40314e !important; margin-bottom: 2px !important; line-height: 1.2 !important; }
+.card-title { font-family: var(--fashion) !important; font-weight: 400 !important; font-size: clamp(24px, 4vw, 48px) !important; color:#40314e !important; margin-top: 0 !important; margin-bottom: 2px !important; line-height: 1.2 !important; }
 .card-duration { font-size: 15px !important; color:#40314e !important; margin-bottom: 18px !important; }
 .card-desc { font-size: 15px !important; font-weight: 600 !important; color:#40314e !important; line-height: 1.6 !important; margin-bottom: 24px !important; }
 .card-prices { display: flex !important; justify-content: space-between !important; gap: 14px !important; margin-bottom: 20px !important; flex-wrap: wrap !important; }
@@ -904,7 +904,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .minikit-box img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
 .minikit-pill { width: auto !important; min-width: 165px !important; padding: 14px 34px !important; background-color: #b9afd0 !important; border-radius: 50px !important; color:#40314e !important; font-size: 20px !important; font-weight: 700 !important; text-align: center !important; transition: background .2s, color .2s !important; }
 .minikit-pill:hover { background: #40314e !important; color:#b9afd0 !important; }
-.minikit-name { font-family: var(--fashion) !important; font-size: 32px !important; line-height: 1.25 !important; letter-spacing: 1px !important; color:#40314e !important; text-align: center !important; }
+.minikit-name { font-family: var(--fashion) !important; font-size: 32px !important; line-height: 1.25 !important; letter-spacing: 1px !important; color:#40314e !important; text-align: center !important; margin-bottom: 0 !important; }
 .minikit-desc { font-size: 15px !important; color:#40314e !important; text-align: center !important; line-height: 1.5 !important; margin-top: -14px !important; max-width: 320px !important; }
 /* ─── 12. PRODUCTS RANGE ─── */
 .products-section { background-color: var(--brand-cream) !important; padding: 50px 0 20px !important; text-align: center !important; position: relative !important; overflow: hidden !important; }
