@@ -455,17 +455,19 @@ body{
   color:#40314e !important;
 }
 .subscribe-form button{
-  background:#b9afd0 !important;
+  background:#c3d7ee !important;
   color:#40314e !important;
   padding:0 22px !important;
   font-size:18px !important;
   font-weight:600 !important;
   white-space:nowrap !important;
-  transition:background .2s, color .2s !important;
+  opacity:1 !important;
+  transition:opacity .2s !important;
 }
 .subscribe-form button:hover{
-  background:#40314e !important;
-  color:#b9afd0 !important;
+  background:#c3d7ee !important;
+  color:#40314e !important;
+  opacity:0.75 !important;
 }
 .footer-social a{
   width:34px !important;
