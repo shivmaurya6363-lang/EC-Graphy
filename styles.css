@@ -880,12 +880,12 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .faq-wrapper { width: 100% !important; background: var(--brand-blue-light) !important; border-radius: 12px !important; padding: 20px !important; box-sizing: border-box !important; }
 .faq-item { border-bottom: 1px solid rgba(45,45,45,0.1) !important; }
 .faq-item:last-child { border-bottom: none !important; }
-.faq-trigger { width: 100% !important; background: none !important; border: none !important; color:#40314e !important; padding: 12px 10px 4px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; font-size: 20px !important; text-align: left !important; cursor: pointer !important; font-weight: 600 !important; font-family: var(--sans) !important; }
+.faq-trigger { width: 100% !important; background: none !important; border: none !important; color:#40314e !important; padding: 22px 14px !important; display: flex !important; align-items: center !important; justify-content: space-between !important; font-size: 20px !important; text-align: left !important; cursor: pointer !important; font-weight: 600 !important; font-family: var(--sans) !important; }
 .faq-icon { font-size: 15px !important; font-weight: 300 !important; display: inline-block !important; transition: transform 0.3s ease !important; }
 .faq-item.is-open .faq-icon { transform: rotate(45deg) !important; }
 .faq-answer { display: none !important; margin-top: 0 !important; }
 .faq-item.is-open .faq-answer { display: block !important; }
-.faq-answer-inner { padding: 0 10px 10px !important; font-size: 15px !important; color:#40314e !important; line-height: 1.5 !important; }
+.faq-answer-inner { padding: 0 14px 20px !important; font-size: 15px !important; color:#40314e !important; line-height: 1.5 !important; }
 /* ─── 10. CONTACT US ─── */
 .contact-section { background-color: #c3d7ee !important; background-image: url('https://cdn.shopify.com/s/files/1/0711/5725/2400/files/ellementco-images-graphy-icon-Contact_us.jpg?v=1784619539') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; padding: 55px 0 70px !important; }
 .contact-section .section-title { color:#40314e !important; font-family: var(--fashion) !important; font-size: clamp(28px, 4.5vw, 60px) !important; margin-bottom: 42px !important; }
