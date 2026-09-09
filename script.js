@@ -65,6 +65,7 @@
     /* ── HERO CAROUSEL ── */
     (function () {
       const carousel = document.getElementById('heroCarousel');
+      if (!carousel) return;
       const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
       const dotsWrap = document.getElementById('heroDots');
       const total = slides.length;
@@ -508,6 +509,25 @@
       var mo = new MutationObserver(fixCardImages);
       var target = document.querySelector('.courses-section') || document.body;
       mo.observe(target, { attributes: true, subtree: true, attributeFilter: ['style', 'class'] });
+    })();
+    /* ── INCLUDED CAROUSEL (course detail pages: "What all is included?") ── */
+    (function () {
+      const track = document.getElementById('includedCarousel');
+      const wrap  = document.getElementById('includedDots');
+      if (!track || !wrap) return;
+      const cards = track.children.length;
+      wrap.innerHTML = '';
+      for (let i = 0; i < cards; i++) {
+        const d = document.createElement('button');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Item ' + (i + 1));
+        d.addEventListener('click', () => { track.scrollTo({ left: (track.scrollWidth - track.clientWidth) * (i / (cards - 1)), behavior: 'smooth' }); });
+        wrap.appendChild(d);
+      }
+      track.addEventListener('scroll', () => {
+        const p = Math.round(track.scrollLeft / Math.max(1, track.scrollWidth - track.clientWidth) * (cards - 1));
+        Array.from(wrap.children).forEach((d, i) => d.classList.toggle('active', i === p));
+      });
     })();
   }
   if (document.readyState === 'loading') {
