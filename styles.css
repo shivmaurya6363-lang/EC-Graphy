@@ -1259,7 +1259,7 @@ button.price-pill:hover{
   font-family: var(--display) !important; font-weight: 400 !important; font-size: 70px !important; color:#40314e !important; margin-bottom: 0 !important; line-height: 1 !important;
 }
 .preetika-text h2{
-  font-family: var(--display) !important; font-weight: 400 !important; font-size: 70px !important; color:#40314e !important; line-height: 1 !important; margin-bottom: 4px !important;
+  font-family: var(--display) !important; font-weight: 400 !important; font-size: 70px !important; color:#40314e !important; line-height: 1 !important; margin: 0 !important;
 }
 .preetika-text .role{
   font-style: italic !important; font-size: 26px !important; color:#40314e !important; margin-bottom: 28px !important; display: block !important;
@@ -1360,7 +1360,7 @@ button.price-pill:hover{
 .wa-float svg{
   width: 28px !important; height: 28px !important; fill: var(--brand-white) !important;
 }
-.detail-grid, .preetika-grid{
+.detail-grid{
   flex-direction: column !important; gap: 24px !important;
 }
 .preetika-wave{
