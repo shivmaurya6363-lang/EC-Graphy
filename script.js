@@ -254,7 +254,7 @@
       const dotsWrap = document.getElementById('courseDots');
       if (!track || !dotsWrap) return;
       const allCards = Array.from(track.children);
-      const perView = () => window.innerWidth <= 992 ? 2 : 3;
+      const perView = () => 2;
       const visibleCards = () => allCards.filter(c => c.style.display !== 'none');
       const pages = () => Math.max(1, Math.ceil(visibleCards().length / perView()));
       // Measure the exact scroll position of a card's left edge (accounts for
