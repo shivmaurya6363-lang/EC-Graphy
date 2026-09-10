@@ -866,7 +866,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .btn-whatsapp:hover { background: #40314e !important; color:#b9afd0 !important; }
 /* ─── 8. CONSULTATION & FORM ─── */
 .consultation-section { background-color: #c3d7ee !important; padding: 15px 0 70px !important; }
-.consultation-section .section-title { color:#40314e !important; }
+.consultation-section .section-title { color:#40314e !important; font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; text-align: center !important; line-height: 1.1 !important; }
 .consultation-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 40px !important; align-items: stretch !important; max-width: var(--page-width) !important; margin: 0 auto !important; padding-left: var(--page-margin) !important; padding-right: var(--page-margin) !important; box-sizing: border-box !important; }
 .consultation-box { border-radius: 30px !important; overflow: hidden !important; }
 .consultation-box img { width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important; }
@@ -1164,7 +1164,7 @@ button.price-pill:hover{
   background-color: #c3d7ee !important; padding: 54px 6% 70px !important;
 }
 .course-detail-section .course-main-title{
-  font-family: var(--display) !important; font-weight: 400 !important; font-size: 64px !important; color:#40314e !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 8px !important;
+  font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; color:#40314e !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 8px !important;
 }
 .course-detail-section .course-tagline{
   font-style: italic !important; font-size: 20px !important; color:#40314e !important; text-align: center !important; margin-bottom: 40px !important;
@@ -1216,7 +1216,7 @@ button.price-pill:hover{
   background-color: var(--brand-cream) !important; padding: 60px 6% 70px !important;
 }
 .included-section .section-title{
-  font-family: var(--display) !important; font-size: 60px !important; color:#40314e !important; margin-bottom: 50px !important;
+  font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; color:#40314e !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 50px !important;
 }
 .included-carousel{
   overflow-x: auto !important; scroll-snap-type: x mandatory !important; display: flex !important; gap: 10px !important; padding: 6px 4px 10px !important; scrollbar-width: none !important;
@@ -1258,10 +1258,10 @@ button.price-pill:hover{
   text-align: center !important; width: 60% !important;
 }
 .preetika-text h3{
-  font-family: var(--display) !important; font-weight: 400 !important; font-size: 70px !important; color:#40314e !important; margin-bottom: 0 !important; line-height: 1 !important;
+  font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; color:#40314e !important; margin-bottom: 0 !important; line-height: 1.1 !important;
 }
 .preetika-text h2{
-  font-family: var(--display) !important; font-weight: 400 !important; font-size: 70px !important; color:#40314e !important; line-height: 1 !important; margin: 0 !important;
+  font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; color:#40314e !important; line-height: 1.1 !important; margin: 0 !important;
 }
 .preetika-text .role{
   font-style: italic !important; font-size: 26px !important; color:#40314e !important; margin-bottom: 28px !important; display: block !important;
@@ -1309,7 +1309,7 @@ button.price-pill:hover{
   background-color: var(--brand-cream) !important; padding: 30px 0 50px !important;
 }
 .gallery-section .section-title{
-  color:#40314e !important; font-family: var(--display) !important; font-size: 60px !important; margin-bottom: 36px !important; font-weight: 400 !important;
+  color:#40314e !important; font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 36px !important;
 }
 .gallery-viewport{
   overflow: hidden !important; width: 100% !important; position: relative !important; touch-action: pan-y !important;
@@ -1366,7 +1366,6 @@ button.price-pill:hover{
   margin-bottom:8px;
 }
 @media (max-width: 600px) {
-  .course-detail-section .course-main-title{ font-size: 44px !important; }
   .stats-grid{ grid-template-columns: 1fr 1fr !important; }
   .preetika-section{ padding: 60px 6% !important; }
   .preetika-wave{ height: 40px !important; }
@@ -1394,11 +1393,8 @@ button.price-pill:hover{
   .ring{ width: 8px !important; height: 18px !important; border-radius: 6px !important; }
   .detail-grid{ flex-direction: column !important; gap: 24px !important; }
   .kit-photo-box{ flex: none !important; min-height: 220px !important; }
-  .course-main-title{ font-size: 44px !important; }
   .included-grid{ grid-template-columns: 1fr !important; gap: 20px !important; }
   .preetika-grid{ flex-direction: column !important; gap: 28px !important; }
-  .preetika-text h3{ font-size: 60px !important; line-height: 0.9 !important; }
-  .preetika-text h2{ font-size: 60px !important; line-height: 0.9 !important; }
   .preetika-text .role{ font-size: 21px !important; }
   .course-tagline{ font-size: 18px !important; }
   .stat-label{ font-size: 13px !important; }
@@ -1419,9 +1415,6 @@ button.price-pill:hover{
 @media (max-width: 479px) {
   .stats-grid{ grid-template-columns: 1fr 1fr !important; }
   .included-card{ flex: 0 0 100% !important; }
-  .course-main-title{ font-size: 36px !important; }
-  .preetika-text h3{ font-size: 48px !important; }
-  .preetika-text h2{ font-size: 48px !important; }
   .preetika-text .role{ font-size: 21px !important; }
   .course-tagline{ font-size: 18px !important; }
   .stat-label{ font-size: 18px !important; }
