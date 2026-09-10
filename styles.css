@@ -831,7 +831,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .wywg-item p { font-size: 15px !important; font-weight: 500 !important; line-height: 1.3 !important; color:#40314e !important; text-align: center !important; }
 /* ─── 6. TESTIMONIALS ─── */
 .test-section { background-color: #c3d7ee !important; padding: 30px 0 !important; }
-.test-section .section-title { color:#40314e !important; font-family: var(--fashion) !important; font-size: clamp(28px, 4.5vw, 60px) !important; margin-bottom: 48px !important; font-weight: 400 !important; }
+.test-section .section-title { color:#40314e !important; font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 48px !important; }
 .test-carousel-wrap { display: flex !important; align-items: center !important; gap: 20px !important; max-width: var(--page-width) !important; margin: 0 auto !important; padding-left: var(--page-margin) !important; padding-right: var(--page-margin) !important; box-sizing: border-box !important; }
 .test-arrow { width: 44px !important; height: 44px !important; border-radius: 50% !important; background: rgba(255,255,255,0.2) !important; border: 2px solid rgba(255,255,255,0.6) !important; display: flex !important; align-items: center !important; justify-content: center !important; cursor: pointer !important; flex-shrink: 0 !important; transition: background 0.2s, opacity 0.2s !important; }
 .test-arrow svg { stroke: #fff !important; }
@@ -904,7 +904,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 .contact-value { display: flex !important; align-items: center !important; background: transparent !important; color:#40314e !important; border-radius: 0 !important; padding: 0 !important; font-size: 15px !important; font-weight: 700 !important; font-family: var(--sans) !important; font-style: normal !important; white-space: nowrap !important; }
 /* ─── 11. MINI KITS ─── */
 .minikits-section { background-color: var(--brand-cream) !important; padding: 50px 0 !important; }
-.minikits-section .section-title { color:#40314e !important; font-family: var(--display) !important; font-size: clamp(28px, 4.5vw, 60px) !important; margin-bottom: 60px !important; }
+.minikits-section .section-title { color:#40314e !important; font-family: var(--display) !important; font-weight: 400 !important; font-size: clamp(32px, 5.5vw, 64px) !important; text-align: center !important; line-height: 1.1 !important; margin-bottom: 60px !important; }
 .minikits-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 55px !important; max-width: var(--page-width) !important; margin: 0 auto !important; padding-left: var(--page-margin) !important; padding-right: var(--page-margin) !important; box-sizing: border-box !important; }
 .minikit-col { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 28px !important; }
 .minikit-box { background: #fefaf2 !important; border-radius: 22px !important; width: 100% !important; aspect-ratio: 5/6 !important; overflow: hidden !important; }
@@ -1366,10 +1366,8 @@ button.price-pill:hover{
   margin-bottom:8px;
 }
 @media (max-width: 600px) {
-  .gallery-photo{ flex: 0 0 80% !important; }
   .course-detail-section .course-main-title{ font-size: 44px !important; }
   .stats-grid{ grid-template-columns: 1fr 1fr !important; }
-  .included-card{ flex: 0 0 calc(85% - 20px) !important; }
   .preetika-section{ padding: 60px 6% !important; }
   .preetika-wave{ height: 40px !important; }
   .stats-section{ padding: 70px 6% !important; }
@@ -1395,25 +1393,32 @@ button.price-pill:hover{
   .notebook-rings{ padding: 0 8px !important; top: -10px !important; }
   .ring{ width: 8px !important; height: 18px !important; border-radius: 6px !important; }
   .detail-grid{ flex-direction: column !important; gap: 24px !important; }
-  .kit-photo-box{ min-height: 220px !important; }
+  .kit-photo-box{ flex: none !important; min-height: 220px !important; }
   .course-main-title{ font-size: 44px !important; }
   .included-grid{ grid-template-columns: 1fr !important; gap: 20px !important; }
+  .preetika-grid{ flex-direction: column !important; gap: 28px !important; }
   .preetika-text h3{ font-size: 60px !important; line-height: 0.9 !important; }
   .preetika-text h2{ font-size: 60px !important; line-height: 0.9 !important; }
   .preetika-text .role{ font-size: 21px !important; }
   .course-tagline{ font-size: 18px !important; }
   .stat-label{ font-size: 13px !important; }
   .detail-left h2{ font-size: 28px !important; }
+  .gallery-photo{ flex: 0 0 50% !important; }
+  .included-card{ flex: 0 0 100% !important; }
+  .included-copy h4{ line-height: 1.3 !important; margin-bottom: 8px !important; }
+  .included-copy{ padding: 0 10px !important; }
+  .included-carousel{ -webkit-overflow-scrolling: touch !important; gap: 0 !important; }
 }
 @media (max-width: 992px) {
   .gallery-photo{ flex: 0 0 50% !important; }
   .detail-grid{ flex-direction: column !important; gap: 24px !important; }
+  .kit-photo-box{ flex: none !important; }
   .stats-grid{ grid-template-columns: 1fr 1fr !important; }
   .included-card{ flex: 0 0 calc(50% - 20px) !important; }
 }
 @media (max-width: 479px) {
   .stats-grid{ grid-template-columns: 1fr 1fr !important; }
-  .included-card{ flex: 0 0 90% !important; }
+  .included-card{ flex: 0 0 100% !important; }
   .course-main-title{ font-size: 36px !important; }
   .preetika-text h3{ font-size: 48px !important; }
   .preetika-text h2{ font-size: 48px !important; }
