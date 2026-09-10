@@ -529,6 +529,98 @@
         Array.from(wrap.children).forEach((d, i) => d.classList.toggle('active', i === p));
       });
     })();
+    /* ── STUDENT GALLERY SLIDER (course detail pages): touch, drag, autoplay, dots ── */
+    (function () {
+      const viewport = document.getElementById('galleryViewport');
+      const strip    = document.getElementById('galleryStrip');
+      const dotsWrap = document.getElementById('galleryDots');
+      if (!strip || !viewport) return;
+
+      const photos      = Array.from(strip.children);
+      const AUTOPLAY_MS = 5000;
+      let current       = 0;
+      let autoTimer     = null;
+
+      function visibleCount() {
+        const vw = viewport.clientWidth;
+        if (vw <= 600)  return 1;
+        if (vw <= 992)  return 2;
+        return 4;
+      }
+      function totalPages() { return Math.max(1, photos.length - visibleCount() + 1); }
+      function getSlideWidth() { return photos[0] ? photos[0].getBoundingClientRect().width + 3 : 0; }
+
+      function goTo(idx) {
+        const pages = totalPages();
+        current = Math.max(0, Math.min(idx, pages - 1));
+        const offset = current * getSlideWidth();
+        strip.style.transform = `translateX(-${offset}px)`;
+        updateDots();
+      }
+
+      function buildDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        const pages = totalPages();
+        if (pages <= 1) { dotsWrap.style.display = 'none'; return; }
+        dotsWrap.style.display = 'flex';
+        for (let i = 0; i < pages; i++) {
+          const d = document.createElement('button');
+          d.className = 'dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Gallery page ' + (i + 1));
+          d.addEventListener('click', () => { goTo(i); restartAutoplay(); });
+          dotsWrap.appendChild(d);
+        }
+      }
+
+      function updateDots() {
+        if (!dotsWrap) return;
+        Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function startAutoplay() { autoTimer = setInterval(() => { goTo(current + 1 >= totalPages() ? 0 : current + 1); }, AUTOPLAY_MS); }
+      function restartAutoplay() { clearInterval(autoTimer); startAutoplay(); }
+
+      let startX = null, startLeft = 0, dragging = false;
+
+      viewport.addEventListener('pointerdown', e => {
+        startX    = e.clientX;
+        startLeft = current * getSlideWidth();
+        dragging  = false;
+        strip.classList.add('is-dragging');
+        clearInterval(autoTimer);
+        viewport.setPointerCapture(e.pointerId);
+      });
+      viewport.addEventListener('pointermove', e => {
+        if (startX === null) return;
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 5) dragging = true;
+        strip.style.transform = `translateX(-${startLeft - dx}px)`;
+      });
+      viewport.addEventListener('pointerup', e => {
+        if (startX === null) return;
+        strip.classList.remove('is-dragging');
+        const dx = e.clientX - startX;
+        if (dragging) {
+          const threshold = getSlideWidth() * 0.2;
+          if (dx < -threshold)      goTo(current + 1);
+          else if (dx > threshold)  goTo(current - 1);
+          else                      goTo(current);
+        }
+        startX = null; dragging = false; restartAutoplay();
+      });
+      viewport.addEventListener('pointercancel', () => {
+        strip.classList.remove('is-dragging');
+        goTo(current); startX = null; restartAutoplay();
+      });
+      viewport.addEventListener('mouseenter', () => clearInterval(autoTimer));
+      viewport.addEventListener('mouseleave', restartAutoplay);
+      window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, totalPages() - 1)); });
+
+      buildDots();
+      goTo(0);
+      startAutoplay();
+    })();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
