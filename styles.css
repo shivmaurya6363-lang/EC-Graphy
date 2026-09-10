@@ -748,6 +748,7 @@ button { font-family: inherit !important; cursor: pointer !important; border: no
 /* ─── 2. HERO CAROUSEL (scrollable + autoplay) ─── */
 .hero-section { background-color: #c3d7ee !important; padding: 65px 0 45px !important; position: relative !important; overflow: hidden !important; }
 .hero-section.course-hero { background-color: #fbf2eb !important; }
+.course-hero .hero-slide { background: #fff !important; }
 .hero-carousel { position: relative !important; height: 560px !important; max-width: var(--page-width) !important; margin: 0 auto !important; padding-left: var(--page-margin) !important; padding-right: var(--page-margin) !important; box-sizing: border-box !important; }
 .hero-slide { position: absolute !important; top: 50% !important; left: 50% !important; width: 44% !important; aspect-ratio: 1 / 0.93 !important; border-radius: 44px !important; background: #fbf4e6 !important; display: flex !important; align-items: center !important; justify-content: center !important; transform: translate(-50%, -50%) !important; transition: transform .7s cubic-bezier(.22,.8,.3,1), opacity .7s, z-index 0s !important; cursor: grab !important; overflow: hidden !important; }
 .hero-slide:active { cursor: grabbing !important; }
@@ -1434,7 +1435,7 @@ button.price-pill:hover{
   width: 100%; height: auto; object-fit: contain; display: block; border-radius: 70px;
 }
 .salon-cta-section{
-  background-color: var(--brand-cream) !important; padding: 30px 0 80px !important; text-align: center;
+  background-color: #c3d7ee !important; padding: 30px 0 80px !important; text-align: center;
 }
 .salon-cta-section .section-title{
   margin-bottom: 50px;
