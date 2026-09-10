@@ -1141,7 +1141,8 @@ body:has(.drawer-toggle:checked) { overflow: hidden !important; }
 /* ============================================
    COURSE DETAIL PAGE TEMPLATE
    (shared by: DIY Nail Art, Gel-X, Nail Anatomy,
-   Nail Mastery, Online Press-ons Workshop pages)
+   Nail Mastery, Online Press-ons Workshop pages,
+   Basic to Advance Nail Art Courses)
    ============================================ */
 .pricing .plan-grid,
 .pricing .cartBtns.buyBtnWeb,
@@ -1346,9 +1347,6 @@ button.price-pill:hover{
 .minikit-pill a{
   display: block !important; width: 100% !important; height: 100% !important; padding: 14px 34px !important; color:#40314e !important; text-decoration: none !important;
 }
-.minikit-pill:hover a{
-  color:#b9afd0 !important;
-}
 .footer-newsletter > p{
   font-size: 11px !important; color:#40314e !important; margin-bottom: 14px !important;
 }
@@ -1361,83 +1359,68 @@ button.price-pill:hover{
 .wa-float svg{
   width: 28px !important; height: 28px !important; fill: var(--brand-white) !important;
 }
-.detail-grid{
-  flex-direction: column !important; gap: 24px !important;
-}
-.preetika-wave{
-  height: 40px !important;
-}
-.mobile-drawer.open{
-  transform: translateX(0) !important;
-}
-.drawer-overlay.open{
-  display: block !important;
-}
-.calendar-section{
-  padding: 50px 4% 50px !important;
-}
-.calendar-board{
-  padding: 10px 6px 14px !important; overflow-x: auto !important; overflow-y: visible !important; -webkit-overflow-scrolling: touch !important; height: auto !important;
-}
-.calendar-board::-webkit-scrollbar{
-  height: 4px !important; width: 0 !important;
-}
-.calendar-board::-webkit-scrollbar-track{
-  background: var(--brand-cream) !important; border-radius: 4px !important;
-}
-.calendar-board::-webkit-scrollbar-thumb{
-  background: #b9afd0 !important; border-radius: 4px !important;
-}
-.calendar-grid{
-  min-width: 490px !important;
-}
-.calendar-day-header{
-  font-size: 10px !important; padding: 5px 2px !important;
-}
-.calendar-cell{
-  min-height: 55px !important; height: auto !important; padding: 3px 2px !important;
-}
-.day-number{
-  font-size: 10px !important;
-}
-.day-number.circled::after{
-  width: 22px !important; height: 15px !important;
-}
-.sticky-note{
-  position: relative !important; top: auto !important; left: auto !important; width: auto !important; transform: none !important; font-size: 7px !important; padding: 3px 2px !important; margin-top: 2px !important; border-radius: 4px !important; box-shadow: none !important;
-}
-.pin{
-  width: 9px !important; height: 9px !important; top: -5px !important;
-}
-.pin::after{
-  height: 3px !important; top: 8px !important;
-}
-.calendar-title{
-  font-size: 14px !important;
-}
-.calendar-month{
-  font-size: 14px !important;
-}
-.notebook-rings{
-  padding: 0 8px !important; top: -10px !important;
-}
-.ring{
-  width: 8px !important; height: 18px !important; border-radius: 6px !important;
-}
-.course-main-title{
-  font-size: 44px !important;
-}
-.included-grid{
-  grid-template-columns: 1fr !important; gap: 20px !important;
-}
-.course-tagline{
-  font-size: 18px !important;
-}
 .course-header h3{
   font-size:20px;
   color:#40314e;
   font-weight:400;
   margin-bottom:8px;
+}
+@media (max-width: 600px) {
+  .gallery-photo{ flex: 0 0 80% !important; }
+  .course-detail-section .course-main-title{ font-size: 44px !important; }
+  .stats-grid{ grid-template-columns: 1fr 1fr !important; }
+  .included-card{ flex: 0 0 calc(85% - 20px) !important; }
+  .preetika-section{ padding: 60px 6% !important; }
+  .preetika-wave{ height: 40px !important; }
+  .stats-section{ padding: 70px 6% !important; }
+  .preetika-text{ width: 100% !important; }
+  .preetika-photo{ width: 100% !important; }
+  .mobile-drawer.open{ transform: translateX(0) !important; }
+  .drawer-overlay.open{ display: block !important; }
+  .calendar-section{ padding: 50px 4% 50px !important; }
+  .calendar-board{ padding: 10px 6px 14px !important; overflow-x: auto !important; overflow-y: visible !important; -webkit-overflow-scrolling: touch !important; height: auto !important; }
+  .calendar-board::-webkit-scrollbar{ height: 4px !important; width: 0 !important; }
+  .calendar-board::-webkit-scrollbar-track{ background: var(--brand-cream) !important; border-radius: 4px !important; }
+  .calendar-board::-webkit-scrollbar-thumb{ background: #b9afd0 !important; border-radius: 4px !important; }
+  .calendar-grid{ min-width: 490px !important; }
+  .calendar-day-header{ font-size: 10px !important; padding: 5px 2px !important; }
+  .calendar-cell{ min-height: 55px !important; height: auto !important; padding: 3px 2px !important; }
+  .day-number{ font-size: 10px !important; }
+  .day-number.circled::after{ width: 22px !important; height: 15px !important; }
+  .sticky-note{ position: relative !important; top: auto !important; left: auto !important; width: auto !important; transform: none !important; font-size: 7px !important; padding: 3px 2px !important; margin-top: 2px !important; border-radius: 4px !important; box-shadow: none !important; }
+  .pin{ width: 9px !important; height: 9px !important; top: -5px !important; }
+  .pin::after{ height: 3px !important; top: 8px !important; }
+  .calendar-title{ font-size: 14px !important; }
+  .calendar-month{ font-size: 14px !important; }
+  .notebook-rings{ padding: 0 8px !important; top: -10px !important; }
+  .ring{ width: 8px !important; height: 18px !important; border-radius: 6px !important; }
+  .detail-grid{ flex-direction: column !important; gap: 24px !important; }
+  .kit-photo-box{ min-height: 220px !important; }
+  .course-main-title{ font-size: 44px !important; }
+  .included-grid{ grid-template-columns: 1fr !important; gap: 20px !important; }
+  .preetika-text h3{ font-size: 60px !important; line-height: 0.9 !important; }
+  .preetika-text h2{ font-size: 60px !important; line-height: 0.9 !important; }
+  .preetika-text .role{ font-size: 21px !important; }
+  .course-tagline{ font-size: 18px !important; }
+  .stat-label{ font-size: 13px !important; }
+  .detail-left h2{ font-size: 28px !important; }
+}
+@media (max-width: 992px) {
+  .gallery-photo{ flex: 0 0 50% !important; }
+  .detail-grid{ flex-direction: column !important; gap: 24px !important; }
+  .stats-grid{ grid-template-columns: 1fr 1fr !important; }
+  .included-card{ flex: 0 0 calc(50% - 20px) !important; }
+}
+@media (max-width: 479px) {
+  .stats-grid{ grid-template-columns: 1fr 1fr !important; }
+  .included-card{ flex: 0 0 90% !important; }
+  .course-main-title{ font-size: 36px !important; }
+  .preetika-text h3{ font-size: 48px !important; }
+  .preetika-text h2{ font-size: 48px !important; }
+  .preetika-text .role{ font-size: 21px !important; }
+  .course-tagline{ font-size: 18px !important; }
+  .stat-label{ font-size: 18px !important; }
+  .detail-left h2{ font-size: 28px !important; }
 }
 
 /* ============================================
@@ -1539,15 +1522,42 @@ button.price-pill:hover{
 .form-note{
   text-align: center; font-size: 15px; color:#40314e !important; margin-top: 12px; font-family: var(--sans) !important;
 }
-.salon-hero-image, .salon-cta-grid, .salon-form-container{
-  max-width: 100% !important;
+.course-header h3{
+  font-size:15px;
+  color:#40314e;
+  font-weight:400;
+  margin-bottom:0;
 }
-.salon-cta-grid::-webkit-scrollbar{
-  display: none !important;
+@media (max-width: 1450px) {
+  .salon-hero-image, .salon-cta-grid, .salon-form-container{ max-width: 100% !important; }
 }
-.mobile-drawer.open{
-  transform: translateX(0) !important;
+@media (max-width: 1200px) and (min-width: 901px) {
+  .salon-cta-grid{ grid-template-columns: repeat(2, 1fr) !important; }
 }
-.drawer-overlay.open{
-  display: block !important;
+@media (max-width: 900px) {
+  .salon-hero-image{ border-radius: 14px; }
+  .salon-hero-image img{ border-radius: 14px; }
+  .salon-cta-grid{ display: flex !important;
+    grid-template-columns: none !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: var(--page-margin) !important;
+    gap: 20px !important;
+    scrollbar-width: none !important; }
+  .salon-cta-grid::-webkit-scrollbar{ display: none !important; }
+  .salon-cta-card{ flex: 0 0 100% !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    gap: 20px !important; }
+  .salon-cta-placeholder{ border-radius: 18px !important; }
+  .salon-cta-title{ margin: 0 !important; }
+  .salon-cta-desc{ margin-top: 0 !important; }
+  .btn-enquire{ padding: 10px 30px !important; }
+  .salon-form-wrap{ grid-template-columns: 1fr; padding: 30px 22px; gap: 36px; }
+  .salon-form-right{ padding: 26px; }
+}
+@media (max-width: 600px) {
+  .mobile-drawer.open{ transform: translateX(0) !important; }
+  .drawer-overlay.open{ display: block !important; }
 }
