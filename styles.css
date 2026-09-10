@@ -1557,5 +1557,5 @@ button.price-pill:hover{
 }
 @media (max-width: 600px) {
   .mobile-drawer.open{ transform: translateX(0) !important; }
-  .drawer-overlay.open{ display: block !important; }
+  .drawer-overlay.open{ display: block !important; /*color: red*/}
 }
