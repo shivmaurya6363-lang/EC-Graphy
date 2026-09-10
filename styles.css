@@ -1567,7 +1567,8 @@ button.price-pill:hover{
 /* margin reset: ol/ul/li only */
 
 /* ─── HERO ─── */
-.ac-hero-section{ background-color:#c3d7ee !important; padding:70px 6% 90px !important; text-align:center !important; position:relative !important; overflow:hidden !important; }
+.ac-hero-section{ background-color:#c3d7ee !important; padding:70px 0 90px !important; text-align:center !important; position:relative !important; overflow:hidden !important; }
+.ac-hero-inner{ position:relative !important; z-index:2 !important; max-width:var(--page-width) !important; margin:0 auto !important; padding-left:var(--page-margin) !important; padding-right:var(--page-margin) !important; box-sizing:border-box !important; }
 .ac-hero-blob{ position:absolute !important; border-radius:50% !important; pointer-events:none !important; }
 .ac-hero-blob--1{ top:-120px !important; right:-80px !important; width:320px !important; height:320px !important; background:#b9afd0 !important; opacity:.55 !important; }
 .ac-hero-blob--2{ bottom:-140px !important; left:-100px !important; width:280px !important; height:280px !important; background:#82a3d4 !important; opacity:.35 !important; }
@@ -1578,17 +1579,17 @@ button.price-pill:hover{
 .ac-hero-stat{ background:rgba(255,255,255,0.14) !important; border:1px solid rgba(255,255,255,0.35) !important; color:#40314e !important; border-radius:50px !important; padding:10px 22px !important; font-family:var(--sans) !important; font-size:13px !important; font-weight:600 !important; }
 
 /* ─── FILTER BAR ─── */
-.ac-filter-section{ background:var(--brand-cream) !important; padding:36px 6% 0 !important; }
-.ac-course-filter{ display:flex !important; flex-wrap:wrap !important; gap:14px !important; justify-content:center !important; }
+.ac-filter-section{ background:var(--brand-cream) !important; padding:36px 0 0 !important; }
+.ac-course-filter{ display:flex !important; flex-wrap:wrap !important; gap:14px !important; justify-content:center !important; max-width:var(--page-width) !important; margin:0 auto !important; padding-left:var(--page-margin) !important; padding-right:var(--page-margin) !important; box-sizing:border-box !important; }
 .ac-filter-btn{ font-family:var(--sans) !important; font-size:14px !important; font-weight:600 !important; padding:10px 24px !important; border:2px solid #c3d7ee !important; border-radius:50px !important; background:#c3d7ee !important; color:#40314e !important; cursor:pointer !important; opacity:1 !important; transition:opacity .2s !important; }
 .ac-filter-btn.active{ background:#82a3d4 !important; color:#40314e !important; border-color:#82a3d4 !important; opacity:1 !important; }
 .ac-filter-btn:hover{ background:#c3d7ee !important; border-color:#c3d7ee !important; color:#40314e !important; opacity:.75 !important; }
 .ac-filter-btn.active:hover{ opacity:.85 !important; }
 
 /* ─── COURSES GRID ─── */
-.ac-courses-section{ background-color:var(--brand-cream) !important; padding:36px 6% 70px !important; }
+.ac-courses-section{ background-color:var(--brand-cream) !important; padding:36px 0 70px !important; }
 .ac-course-count{ text-align:center !important; font-family:var(--sans) !important; font-size:14px !important; color:#40314e !important; margin-bottom:34px !important; font-weight:500 !important; }
-.ac-courses-grid{ display:flex !important; flex-wrap:wrap !important; gap:36px !important; max-width:1240px !important; margin:0 auto !important; align-items:stretch !important; }
+.ac-courses-grid{ display:flex !important; flex-wrap:wrap !important; gap:36px !important; max-width:var(--page-width) !important; margin:0 auto !important; align-items:stretch !important; padding-left:var(--page-margin) !important; padding-right:var(--page-margin) !important; box-sizing:border-box !important; }
 .ac-course-card{ flex:1 1 420px !important; max-width:600px !important; background:var(--brand-cream-card) !important; border-radius:20px !important; padding:30px 32px 34px !important; display:flex !important; flex-direction:column !important; text-align:center !important; box-shadow:0 6px 22px rgba(45,45,45,0.06) !important; transition:transform .2s, box-shadow .2s !important; position:relative !important; border:1px solid rgba(130,163,212,0.14) !important; }
 .ac-course-card:hover{ transform:translateY(-4px) !important; box-shadow:0 16px 32px rgba(45,45,45,0.10) !important; }
 .ac-card-badge{ position:absolute !important; top:18px !important; left:18px !important; background:#ee6396 !important; color:#ffffff !important; font-family:var(--sans) !important; font-size:11px !important; font-weight:700 !important; letter-spacing:.5px !important; padding:5px 14px !important; border-radius:50px !important; text-transform:uppercase !important; z-index:2 !important; }
@@ -1615,8 +1616,8 @@ button.price-pill:hover{
 .ac-no-results.show{ display:block !important; }
 
 /* ─── CONSULTATION FORM ─── */
-.ac-consultation-section{ background-color:#c3d7ee !important; padding:60px 6% 70px !important; }
-.ac-consultation-grid{ display:grid !important; grid-template-columns:1fr 1fr !important; gap:40px !important; align-items:stretch !important; max-width:1100px !important; margin:0 auto !important; }
+.ac-consultation-section{ background-color:#c3d7ee !important; padding:60px 0 70px !important; }
+.ac-consultation-grid{ display:grid !important; grid-template-columns:1fr 1fr !important; gap:40px !important; align-items:stretch !important; max-width:var(--page-width) !important; margin:0 auto !important; padding-left:var(--page-margin) !important; padding-right:var(--page-margin) !important; box-sizing:border-box !important; }
 .ac-consultation-box{ border-radius:30px !important; overflow:hidden !important; min-height:340px !important; }
 .ac-consultation-box img{ width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; }
 .ac-consultation-form{ background:#fbf2eb !important; border-radius:30px !important; padding:40px !important; color:#40314e !important; display:flex !important; flex-direction:column !important; }
@@ -1639,7 +1640,7 @@ button.price-pill:hover{
   .ac-consultation-box{ min-height:260px !important; }
 }
 @media (max-width:600px){
-  .ac-hero-section{ padding:50px 5% 60px !important; }
+  .ac-hero-section{ padding:50px 0 60px !important; }
   .ac-hero-title{ font-size:32px !important; word-spacing:3px !important; }
   .ac-hero-sub{ font-size:15px !important; }
   .ac-card-title{ font-size:26px !important; word-spacing:3px !important; }
@@ -1647,6 +1648,6 @@ button.price-pill:hover{
   .ac-course-filter{ flex-wrap:nowrap !important; overflow-x:auto !important; justify-content:flex-start !important; -webkit-overflow-scrolling:touch !important; scrollbar-width:none !important; padding-bottom:4px !important; }
   .ac-course-filter::-webkit-scrollbar{ display:none !important; }
   .ac-filter-btn{ flex-shrink:0 !important; white-space:nowrap !important; font-size:13px !important; padding:9px 18px !important; }
-  .ac-courses-section{ padding:30px 5% 50px !important; }
-  .ac-consultation-section{ padding:40px 5% 50px !important; }
+  .ac-courses-section{ padding:30px 0 50px !important; }
+  .ac-consultation-section{ padding:40px 0 50px !important; }
 }
