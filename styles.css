@@ -1560,3 +1560,93 @@ button.price-pill:hover{
   .mobile-drawer.open{ transform: translateX(0) !important; }
   .drawer-overlay.open{ display: block !important; }
 }
+
+/* ============================================
+   ALL COURSES PAGE (course listing/index)
+   ============================================ */
+/* margin reset: ol/ul/li only */
+
+/* ─── HERO ─── */
+.ac-hero-section{ background-color:#c3d7ee !important; padding:70px 6% 90px !important; text-align:center !important; position:relative !important; overflow:hidden !important; }
+.ac-hero-blob{ position:absolute !important; border-radius:50% !important; pointer-events:none !important; }
+.ac-hero-blob--1{ top:-120px !important; right:-80px !important; width:320px !important; height:320px !important; background:#b9afd0 !important; opacity:.55 !important; }
+.ac-hero-blob--2{ bottom:-140px !important; left:-100px !important; width:280px !important; height:280px !important; background:#82a3d4 !important; opacity:.35 !important; }
+.ac-eyebrow{ position:relative !important; z-index:2 !important; display:inline-block !important; font-family:var(--sans) !important; font-size:14px !important; font-weight:700 !important; letter-spacing:3px !important; text-transform:uppercase !important; color:#40314e !important; margin-bottom:18px !important; }
+.ac-hero-title{ position:relative !important; z-index:2 !important; font-family:var(--display) !important; font-weight:400 !important; font-size:64px !important; line-height:1.05 !important; color:#40314e !important; margin:0 0 20px !important; word-spacing:6px !important; letter-spacing:.5px !important; }
+.ac-hero-sub{ position:relative !important; z-index:2 !important; font-family:var(--sans) !important; font-size:18px !important; font-weight:500 !important; color:#40314e !important; max-width:560px !important; margin:0 auto !important; }
+.ac-hero-stats{ position:relative !important; z-index:2 !important; margin-top:44px !important; display:flex !important; justify-content:center !important; gap:10px !important; flex-wrap:wrap !important; }
+.ac-hero-stat{ background:rgba(255,255,255,0.14) !important; border:1px solid rgba(255,255,255,0.35) !important; color:#40314e !important; border-radius:50px !important; padding:10px 22px !important; font-family:var(--sans) !important; font-size:13px !important; font-weight:600 !important; }
+
+/* ─── FILTER BAR ─── */
+.ac-filter-section{ background:var(--brand-cream) !important; padding:36px 6% 0 !important; }
+.ac-course-filter{ display:flex !important; flex-wrap:wrap !important; gap:14px !important; justify-content:center !important; }
+.ac-filter-btn{ font-family:var(--sans) !important; font-size:14px !important; font-weight:600 !important; padding:10px 24px !important; border:2px solid #c3d7ee !important; border-radius:50px !important; background:#c3d7ee !important; color:#40314e !important; cursor:pointer !important; opacity:1 !important; transition:opacity .2s !important; }
+.ac-filter-btn.active{ background:#82a3d4 !important; color:#40314e !important; border-color:#82a3d4 !important; opacity:1 !important; }
+.ac-filter-btn:hover{ background:#c3d7ee !important; border-color:#c3d7ee !important; color:#40314e !important; opacity:.75 !important; }
+.ac-filter-btn.active:hover{ opacity:.85 !important; }
+
+/* ─── COURSES GRID ─── */
+.ac-courses-section{ background-color:var(--brand-cream) !important; padding:36px 6% 70px !important; }
+.ac-course-count{ text-align:center !important; font-family:var(--sans) !important; font-size:14px !important; color:#40314e !important; margin-bottom:34px !important; font-weight:500 !important; }
+.ac-courses-grid{ display:flex !important; flex-wrap:wrap !important; gap:36px !important; max-width:1240px !important; margin:0 auto !important; align-items:stretch !important; }
+.ac-course-card{ flex:1 1 420px !important; max-width:600px !important; background:var(--brand-cream-card) !important; border-radius:20px !important; padding:30px 32px 34px !important; display:flex !important; flex-direction:column !important; text-align:center !important; box-shadow:0 6px 22px rgba(45,45,45,0.06) !important; transition:transform .2s, box-shadow .2s !important; position:relative !important; border:1px solid rgba(130,163,212,0.14) !important; }
+.ac-course-card:hover{ transform:translateY(-4px) !important; box-shadow:0 16px 32px rgba(45,45,45,0.10) !important; }
+.ac-card-badge{ position:absolute !important; top:18px !important; left:18px !important; background:#ee6396 !important; color:#ffffff !important; font-family:var(--sans) !important; font-size:11px !important; font-weight:700 !important; letter-spacing:.5px !important; padding:5px 14px !important; border-radius:50px !important; text-transform:uppercase !important; z-index:2 !important; }
+.ac-card-image{ width:100% !important; border-radius:12px !important; background:var(--brand-pink-pale) !important; margin-bottom:20px !important; overflow:hidden !important; aspect-ratio:16/10 !important; position:static !important; }
+.ac-card-image img{ width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; position:static !important; }
+.ac-card-image--empty{ display:flex !important; align-items:center !important; justify-content:center !important; background:linear-gradient(135deg, var(--brand-blue-light), var(--brand-pink-pale)) !important; }
+.ac-card-image--empty svg{ stroke:var(--brand-white) !important; opacity:.85 !important; }
+.ac-card-meta{ font-family:var(--sans) !important; font-size:15px !important; color:#40314e !important; font-weight:600 !important; letter-spacing:.2px !important; margin-bottom:6px !important; }
+.ac-card-title{ font-family:var(--fashion) !important; font-weight:400 !important; font-size:34px !important; color:#40314e !important; margin:0 0 6px !important; line-height:1.25 !important; word-spacing:5px !important; letter-spacing:.3px !important; }
+.ac-card-duration{ font-family:var(--sans) !important; font-size:13px !important; color:#40314e !important; margin-bottom:16px !important; font-weight:600 !important; }
+.ac-card-desc{ font-family:var(--sans) !important; font-size:15px !important; font-weight:500 !important; color:#40314e !important; line-height:1.6 !important; margin-bottom:22px !important; }
+.ac-card-prices{ display:flex !important; justify-content:center !important; gap:12px !important; margin-bottom:20px !important; flex-wrap:wrap !important; }
+.ac-card-prices--single{ justify-content:center !important; }
+.ac-card-price{ display:inline-block !important; border:2px solid var(--brand-blue) !important; color:#40314e !important; background:var(--brand-cream-card) !important; padding:8px 20px !important; border-radius:50px !important; font-family:var(--sans) !important; font-size:16px !important; font-weight:700 !important; }
+.ac-card-includes-row{ display:flex !important; gap:16px !important; margin-bottom:22px !important; text-align:left !important; flex-wrap:wrap !important; }
+.ac-card-includes{ font-family:var(--sans) !important; font-size:13px !important; color:#40314e !important; line-height:1.6 !important; flex:1 1 200px !important; margin:0 !important; padding:14px 16px !important; border-radius:12px !important; background:#f4f8fd !important; border:1px solid var(--brand-blue-light) !important; }
+.ac-inc-title{ font-weight:700 !important; font-size:14px !important; display:block !important; margin-bottom:6px !important; color:#40314e !important; }
+.ac-card-actions{ display:flex !important; gap:14px !important; justify-content:center !important; margin-top:auto !important; flex-wrap:wrap !important; }
+.ac-btn-card{ background:#b9afd0 !important; color:#40314e !important; text-align:center !important; padding:11px 26px !important; border-radius:50px !important; font-family:var(--sans) !important; font-size:15px !important; font-weight:700 !important; transition:background .2s, color .2s, transform .15s !important; display:inline-block !important; border:none !important; cursor:pointer !important; }
+.ac-btn-card:hover{ background:#40314e !important; color:#40314e !important; transform:translateY(-1px) !important; }
+.ac-btn-card--outline{ background:transparent !important; color:#40314e !important; border:2px solid #b9afd0 !important; padding:9px 24px !important; }
+.ac-btn-card--outline:hover{ background:#40314e !important; color:#40314e !important; border-color:#40314e !important; }
+.ac-no-results{ display:none !important; text-align:center !important; padding:60px 20px !important; font-family:var(--sans) !important; color:#40314e !important; font-size:17px !important; font-weight:600 !important; }
+.ac-no-results.show{ display:block !important; }
+
+/* ─── CONSULTATION FORM ─── */
+.ac-consultation-section{ background-color:#c3d7ee !important; padding:60px 6% 70px !important; }
+.ac-consultation-grid{ display:grid !important; grid-template-columns:1fr 1fr !important; gap:40px !important; align-items:stretch !important; max-width:1100px !important; margin:0 auto !important; }
+.ac-consultation-box{ border-radius:30px !important; overflow:hidden !important; min-height:340px !important; }
+.ac-consultation-box img{ width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; }
+.ac-consultation-form{ background:#fbf2eb !important; border-radius:30px !important; padding:40px !important; color:#40314e !important; display:flex !important; flex-direction:column !important; }
+.ac-form-title{ font-family:var(--display) !important; font-size:32px !important; font-style:normal !important; margin-bottom:8px !important; }
+.ac-form-subtitle{ font-family:var(--sans) !important; font-size:14px !important; opacity:.9 !important; margin:0 0 20px !important; line-height:1.6 !important; }
+.ac-form-fields{ display:flex !important; flex-direction:column !important; gap:14px !important; }
+.ac-form-fields input, .ac-form-fields textarea, .ac-form-select{ width:100% !important; padding:12px 16px !important; border:none !important; border-radius:8px !important; background:var(--brand-white) !important; color:#40314e !important; font-family:var(--sans) !important; font-size:13px !important; outline:none !important; }
+.ac-form-fields input::placeholder, .ac-form-fields textarea::placeholder{ color:#40314e !important; }
+.ac-form-fields textarea{ resize:none !important; min-height:70px !important; font-family:var(--sans) !important; }
+.ac-btn-submit{ align-self:flex-start !important; margin-top:6px !important; display:inline-block !important; width:auto !important; background:#ee6396 !important; color:#40314e !important; font-size:18px !important; font-weight:600 !important; letter-spacing:1px !important; padding:14px 32px !important; border-radius:50px !important; border:none !important; cursor:pointer !important; font-family:var(--fashion) !important; transition:background .2s, color .2s, transform .15s !important; }
+.ac-btn-submit:hover{ background:#ab476c !important; color:#40314e !important; transform:translateY(-2px) !important; }
+.ac-form-success{ display:none !important; font-family:var(--sans) !important; font-size:13px !important; font-weight:600 !important; color:#40314e !important; background:rgba(64,49,78,0.08) !important; border:1px solid rgba(64,49,78,0.25) !important; padding:12px 16px !important; border-radius:10px !important; margin:6px 0 0 !important; }
+.ac-form-success.show{ display:block !important; }
+
+
+/* ─── RESPONSIVE ─── */
+@media (max-width:992px){
+  .ac-hero-title{ font-size:44px !important; }
+  .ac-consultation-grid{ grid-template-columns:1fr !important; }
+  .ac-consultation-box{ min-height:260px !important; }
+}
+@media (max-width:600px){
+  .ac-hero-section{ padding:50px 5% 60px !important; }
+  .ac-hero-title{ font-size:32px !important; word-spacing:3px !important; }
+  .ac-hero-sub{ font-size:15px !important; }
+  .ac-card-title{ font-size:26px !important; word-spacing:3px !important; }
+  .ac-card-includes-row{ flex-direction:column !important; gap:12px !important; }
+  .ac-course-filter{ flex-wrap:nowrap !important; overflow-x:auto !important; justify-content:flex-start !important; -webkit-overflow-scrolling:touch !important; scrollbar-width:none !important; padding-bottom:4px !important; }
+  .ac-course-filter::-webkit-scrollbar{ display:none !important; }
+  .ac-filter-btn{ flex-shrink:0 !important; white-space:nowrap !important; font-size:13px !important; padding:9px 18px !important; }
+  .ac-courses-section{ padding:30px 5% 50px !important; }
+  .ac-consultation-section{ padding:40px 5% 50px !important; }
+}
