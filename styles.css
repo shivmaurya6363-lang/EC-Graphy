@@ -1440,22 +1440,22 @@ button.price-pill:hover{
   margin-bottom: 50px;
 }
 .salon-cta-grid{
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; max-width: var(--page-width); margin: 0 auto; padding-left: var(--page-margin); padding-right: var(--page-margin); box-sizing: border-box;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 55px; max-width: var(--page-width); margin: 0 auto; padding-left: var(--page-margin); padding-right: var(--page-margin); box-sizing: border-box;
 }
 .salon-cta-card{
   display: flex; flex-direction: column; align-items: center; gap: 28px;
 }
 .salon-cta-placeholder{
-  width: 100%; aspect-ratio: 1/1; background-color: #fefaf2 !important; background-size: cover; background-position: center; border-radius: 24px; position: relative; overflow: hidden;
+  width: 100%; aspect-ratio: 5/6; background-color: #fefaf2 !important; background-size: cover; background-position: center; border-radius: 22px; position: relative; overflow: hidden;
 }
 .salon-cta-label{
   display: none; position: absolute; top: 20px; left: 20px; background: #fff05a !important; color:#40314e !important; font-family: var(--sans) !important; font-size: 15px; font-weight: 700; padding: 6px 16px; border-radius: 6px;
 }
 .salon-cta-title{
-  font-family: var(--fashion) !important; font-size: clamp(24px, 2.2vw, 32px); color:#40314e !important; font-weight: 400; margin: 0 !important;
+  font-family: var(--fashion) !important; font-size: 32px !important; line-height: 1.25 !important; letter-spacing: 1px !important; color:#40314e !important; font-weight: 400; text-align: center !important; margin: 0 !important;
 }
 .salon-cta-desc{
-  font-family: var(--sans) !important; font-size: 18px; color:#40314e !important; line-height: 1.6; max-width: 380px; margin: 0 !important;
+  font-family: var(--sans) !important; font-size: 15px !important; color:#40314e !important; line-height: 1.5 !important; text-align: center !important; margin-top: -14px !important; max-width: 320px !important;
 }
 .btn-enquire{
   display: inline-block; background: #b9afd0 !important; color:#40314e !important; font-weight: 700; font-size: 20px; padding: 14px 38px; border-radius: 50px; text-decoration: none !important; border: none; cursor: pointer; transition: background .2s, color .2s; font-family: var(--sans) !important;
@@ -1557,5 +1557,5 @@ button.price-pill:hover{
 }
 @media (max-width: 600px) {
   .mobile-drawer.open{ transform: translateX(0) !important; }
-  .drawer-overlay.open{ display: block !important; /*color: red*/}
+  .drawer-overlay.open{ display: block !important; }
 }
