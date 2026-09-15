@@ -1,3 +1,55 @@
+/* ── REDIRECT TO THANK YOU PAGE AFTER CONSULTATION FORM SUBMISSION ──
+   Graphy's .spContactForm submits via its own platform script (not this
+   file), posting to an endpoint containing "enquiry". Rather than guess
+   at DOM success markers, we patch fetch() and XMLHttpRequest to watch
+   for that request completing successfully, then redirect. ── */
+(function () {
+  var THANK_YOU_URL = 'https://ellementconailacademy.graphy.com/s/pages/thank-you';
+  var redirected = false;
+
+  function goToThankYou() {
+    if (redirected) return;
+    redirected = true;
+    window.location.href = THANK_YOU_URL;
+  }
+
+  function looksLikeEnquiry(url) {
+    return typeof url === 'string' && /enquiry/i.test(url);
+  }
+
+  // Patch fetch
+  var origFetch = window.fetch;
+  if (origFetch) {
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : (input && input.url);
+      return origFetch.apply(this, arguments).then(function (response) {
+        if (looksLikeEnquiry(url) && response && response.ok) {
+          setTimeout(goToThankYou, 400);
+        }
+        return response;
+      });
+    };
+  }
+
+  // Patch XMLHttpRequest (in case Graphy's form uses XHR instead of fetch)
+  var origOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    this.__isEnquiry = looksLikeEnquiry(url);
+    return origOpen.apply(this, arguments);
+  };
+  var origSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function () {
+    if (this.__isEnquiry) {
+      this.addEventListener('load', function () {
+        if (this.status >= 200 && this.status < 300) {
+          setTimeout(goToThankYou, 400);
+        }
+      });
+    }
+    return origSend.apply(this, arguments);
+  };
+})();
+
 (function () {
   function pinFooterToEnd() {
     var footer = document.querySelector('.footer-new-at-last');
