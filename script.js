@@ -98,6 +98,25 @@
         }
       }, true);
     })();
+    /* ── LEVEL ACCORDION (Basic to Advance page) ── */
+    (function () {
+      document.addEventListener('click', function (e) {
+        var trigger = e.target.closest ? e.target.closest('.level-trigger') : null;
+        if (!trigger) return;
+        var box = trigger.closest('.level-box');
+        if (!box) return;
+        var answer = box.querySelector('.level-answer');
+        if (!answer) return;
+        var isOpen = box.classList.contains('is-open');
+        if (isOpen) {
+          box.classList.remove('is-open');
+          answer.style.setProperty('display', 'none', 'important');
+        } else {
+          box.classList.add('is-open');
+          answer.style.setProperty('display', 'block', 'important');
+        }
+      }, true);
+    })();
     /* ── CONSULTATION FORM: mailto with field data ── */
     (function () {
       var btn = document.getElementById('consult-submit');
@@ -673,6 +692,54 @@
       goTo(0);
       startAutoplay();
     })();
+    /* ── ALL COURSES PAGE: course filter grid ── */
+    (function () {
+      var filterBar = document.getElementById('acCourseFilterCourses');
+      var grid = document.getElementById('acCoursesGridCourses');
+      var countLabel = document.getElementById('acCourseCountCourses');
+      var noResults = document.getElementById('acNoResultsCourses');
+      if (!filterBar || !grid) return;
+
+      filterBar.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.ac-filter-btn') : null;
+        if (!btn || !filterBar.contains(btn)) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        filterBar.querySelectorAll('.ac-filter-btn').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter') || 'all';
+        var cards = grid.querySelectorAll('.ac-course-card');
+        var visible = 0;
+
+        cards.forEach(function (card) {
+          var cats = (card.getAttribute('data-category') || '').split(' ');
+          var show = filter === 'all' || cats.indexOf(filter) !== -1;
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        if (countLabel) {
+          countLabel.textContent = filter === 'all'
+            ? 'Showing all ' + visible + ' workshops'
+            : 'Showing ' + visible + ' workshop' + (visible === 1 ? '' : 's');
+        }
+        if (noResults) noResults.classList.toggle('show', visible === 0);
+      });
+    })();
+    /* ── ALL COURSES PAGE: consultation form front-end confirmation ── */
+    document.addEventListener('submit', function (e) {
+      var form = e.target.closest ? e.target.closest('#acConsultForm') : null;
+      if (!form) return;
+      e.preventDefault();
+      var success = document.getElementById('acFormSuccess');
+      if (success) success.classList.add('show');
+      form.reset();
+    }, true);
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
