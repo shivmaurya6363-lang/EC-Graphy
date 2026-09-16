@@ -98,24 +98,26 @@
         }
       }, true);
     })();
-    /* ── LEVEL ACCORDION (Basic to Advance page) ── */
+    /* ── LEVEL BOXES: pair-match heights (Level 1↔4, Level 2↔3) ── */
     (function () {
-      document.addEventListener('click', function (e) {
-        var trigger = e.target.closest ? e.target.closest('.level-trigger') : null;
-        if (!trigger) return;
-        var box = trigger.closest('.level-box');
-        if (!box) return;
-        var answer = box.querySelector('.level-answer');
-        if (!answer) return;
-        var isOpen = box.classList.contains('is-open');
-        if (isOpen) {
-          box.classList.remove('is-open');
-          answer.style.setProperty('display', 'none', 'important');
-        } else {
-          box.classList.add('is-open');
-          answer.style.setProperty('display', 'block', 'important');
-        }
-      }, true);
+      const grid = document.querySelector('.level-grid');
+      if (!grid) return;
+      const boxes = Array.from(grid.children);
+      if (boxes.length < 4) return;
+      function matchHeights() {
+        boxes.forEach(b => { b.style.height = 'auto'; });
+        if (window.innerWidth <= 700) return;
+        const pairs = [[0, 3], [1, 2]];
+        pairs.forEach(([a, b]) => {
+          const h = Math.max(boxes[a].offsetHeight, boxes[b].offsetHeight);
+          boxes[a].style.height = h + 'px';
+          boxes[b].style.height = h + 'px';
+        });
+      }
+      window.addEventListener('load', matchHeights);
+      window.addEventListener('resize', matchHeights);
+      matchHeights();
+      setTimeout(matchHeights, 300);
     })();
     /* ── CONSULTATION FORM: mailto with field data ── */
     (function () {
@@ -384,7 +386,7 @@
           if (n <= 1) return;
           const next = (currentPage() + 1) % n;
           scrollToPage(next);
-        }, 2000);
+        }, 4000);
       }
       function stopCoursesAutoplay() {
         if (coursesAutoplayTimer) clearInterval(coursesAutoplayTimer);
@@ -731,15 +733,6 @@
         if (noResults) noResults.classList.toggle('show', visible === 0);
       });
     })();
-    /* ── ALL COURSES PAGE: consultation form front-end confirmation ── */
-    document.addEventListener('submit', function (e) {
-      var form = e.target.closest ? e.target.closest('#acConsultForm') : null;
-      if (!form) return;
-      e.preventDefault();
-      var success = document.getElementById('acFormSuccess');
-      if (success) success.classList.add('show');
-      form.reset();
-    }, true);
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
